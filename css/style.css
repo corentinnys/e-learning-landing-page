@@ -30,7 +30,7 @@ header button{
     border: none;
     position: relative;
     top: 250px;
-    padding: 10px;
+    padding: 0.625rem;
     color: white;
     border-radius: 30px;
     cursor: pointer;
@@ -113,7 +113,7 @@ footer a{
 
     }
 }
-@media (max-width: 767px) {
+@media (max-width: 47.9375rem) {
     body{
         box-sizing: border-box;
     }
