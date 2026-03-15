@@ -1,0 +1,181 @@
+.container{
+   width: 80%;
+    padding: 0 100px;
+    margin: 0 auto;
+}
+header{
+    height: 70vh;
+    background: url("../assets/image-hero-desktop.png") no-repeat;
+    background-position: 130% 80%;
+
+}
+header img{
+    display: none;
+}
+header h1 {
+    font-size: 3rem;
+    width:500px;
+    position: relative;
+    top: 200px;
+}
+header p{
+    width: 300px;
+    text-align: justify;
+    position: relative;
+    top: 200px;
+}
+header button{
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    border: none;
+    position: relative;
+    top: 250px;
+    padding: 10px;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.2rem;
+
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 50px;
+
+}
+.row article {
+    flex: 0 0 calc(33.333% - 40px); /* 3 éléments par ligne */
+    background: #eee;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+    height: 250px;
+    margin-bottom: 40px;
+}
+.row article:first-child{
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+}
+.row article:first-child h2{
+    font-size: 2rem;
+    text-align: center;
+    width: 90%;
+
+}
+.row article:not(:first-child) img{
+   position: absolute;
+    bottom: 220px;
+}
+.row article:not(:first-child) h2{
+   font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+.row article:not(:first-child) a{
+    display: block;
+    text-decoration: none;
+    color: red;
+}
+.row article:not(:first-child) p {
+    margin: 0;
+}
+
+footer{
+    background: blue;
+    padding: 40px;
+    text-align: right;
+}
+footer a{
+    color: white;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+/* media query pour tablette*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    header{
+        height: 70vh;
+        background: url("../assets/image-hero-tablet.png") no-repeat;
+        background-size: 120%;
+        background-position: -180% 80%;
+
+    }
+    .row article {
+        flex: 0 0 calc(50% - 40px); /* 3 éléments par ligne */
+
+    }
+}
+@media (max-width: 767px) {
+    body{
+        box-sizing: border-box;
+    }
+    .container{
+        padding:0;
+        margin: 0;
+        width: 100%;
+    }
+
+    header {
+        height: auto; /* ← plus de hauteur fixe */
+        background: none;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+header img{
+    display: block;
+    width: 100%;
+}
+    header h1 {
+        font-size: 3rem;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        position: static; /* ← remplace relative */
+        top: auto;        /* ← reset le top */
+    }
+
+    header p {
+        width: 100%;
+        text-align: justify;
+        position: static; /* ← idem pour le p */
+        top: auto;
+    }
+
+    header button {
+        position: static; /* ← idem pour le button */
+        top: auto;
+        width: 200px;
+    }
+    .row {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+    }
+    .row article {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+    }
+    .row article:not(:first-child) img {
+        width: 50px;
+        position: absolute;
+        bottom: 140px;
+    }
+
+    .row article:not(:first-child) h2 {
+        margin-top: 0;
+    }
+}
+
